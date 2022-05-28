@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_project.main.Member">
+    <children>
+        <BorderPane prefHeight="510.0" prefWidth="854.0">
+            <top>
+                <MenuBar prefHeight="0.0" prefWidth="855.0" BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleCancel" text="Close" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <center>
+                <TabPane prefHeight="500.0" prefWidth="686.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab text="Borrowing books">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="686.0">
+                                    <children>
+                                        <BorderPane prefHeight="455.2" prefWidth="602.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <HBox alignment="CENTER" prefHeight="68.0" prefWidth="854.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TextField fx:id="SBName" prefHeight="39.0" prefWidth="170.0" promptText="Book name">
+                                             <HBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button fx:id="SearchBtn" mnemonicParsing="false" onAction="#Search" prefHeight="42.0" prefWidth="81.0" text="Search">
+                                             <HBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </top>
+                                 <center>
+                                    <TableView fx:id="BTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                        <columns>
+                                            <TableColumn fx:id="idCol" prefWidth="75.0" text="Book Id" />
+                                            <TableColumn fx:id="titleCol" prefWidth="75.0" text="Title" />
+                                            <TableColumn fx:id="authorCol" prefWidth="75.0" text="Author" />
+                                            <TableColumn fx:id="publisherCol" prefWidth="75.0" text="Publisher" />
+                                            <TableColumn fx:id="numberCol" prefWidth="75.0" text="Number" />
+                                        </columns>
+                                        <columnResizePolicy>
+                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                        </columnResizePolicy>
+                                    </TableView>
+                                 </center>
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="71.0" prefWidth="854.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TextField fx:id="BBid" prefHeight="37.0" prefWidth="161.0" promptText="Book ID">
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button fx:id="BorrowBtn" mnemonicParsing="false" onAction="#Borrow" prefHeight="36.0" prefWidth="102.0" text="Borrow">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children></HBox>
+
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Returning books">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <BorderPane prefHeight="455.2" prefWidth="602.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <bottom>
+                                                <HBox alignment="CENTER" prefHeight="63.0" prefWidth="602.0" BorderPane.alignment="CENTER">
+                                                    <children>
+                                          <TextField fx:id="bIdR" prefHeight="31.0" prefWidth="151.0" promptText="ID of the book returned">
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                                        <Button fx:id="ReturnBtn" alignment="CENTER" layoutX="281.0" layoutY="27.0" onAction="#returnButtonAction" prefHeight="30.0" prefWidth="91.0" styleClass="setup-btn" text="Return">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                            </bottom>
+                                 <top>
+                                    <HBox alignment="CENTER" prefHeight="49.0" prefWidth="854.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Text fx:id="mName">
+                                             <HBox.margin>
+                                                <Insets left="250.0" />
+                                             </HBox.margin></Text>
+                                          <HBox alignment="BOTTOM_RIGHT" prefHeight="50.0" prefWidth="327.0">
+                                             <HBox.margin>
+                                                <Insets left="200.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#ChangeTab" text="Refresh" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </top>
+                                 <center>
+                                     <ListView fx:id="RTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                         <padding>
+                                             <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                         </padding>
+                                     </ListView>
+                                 </center>
+                                        </BorderPane>
+                                    </children></AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

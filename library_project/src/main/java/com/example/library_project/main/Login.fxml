@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_project.main.Login">
+    <children>
+        <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label fx:id="loginLabel" alignment="CENTER" prefHeight="102.0" prefWidth="601.0" style="-fx-background-color: #2e9a96;" styleClass="headerLabel" text="Library Management Login" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <VBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleUsernameAction" prefHeight="34.0" prefWidth="300.0" promptText="Username">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                    </VBox.margin>
+                </TextField>
+                <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handlePasswordAction" prefHeight="30.0" prefWidth="300.0" promptText="Password">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                    </VBox.margin>
+                </PasswordField>
+            </children>
+        </VBox>
+        <HBox alignment="CENTER" prefHeight="71.0" prefWidth="600.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Button fx:id="loginBtn" contentDisplay="CENTER" onAction="#login" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: blue;" styleClass="loginBtn" text="Login" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelBtn" contentDisplay="CENTER" onAction="#handleCancel" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: Red;" styleClass="cancelBtn" text="Cancel" textFill="#211f1f">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+      <HBox alignment="CENTER" prefHeight="71.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="forgotPassword" contentDisplay="CENTER" onAction="#ForgetPassword" styleClass="ForgetPassword" text="Forgot password?">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="80.0" />
+               </HBox.margin></Button>
+            <Button fx:id="nMember" mnemonicParsing="false" onAction="#nMember" text="new member">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="20.0" />
+               </HBox.margin></Button>
+         </children></HBox>
+    </children>
+</AnchorPane>

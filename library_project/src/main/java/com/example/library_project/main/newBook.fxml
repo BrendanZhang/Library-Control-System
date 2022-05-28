@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="248.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_project.main.newBook">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="400.0" styleClass="root" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TextField fx:id="bName" alignment="CENTER_LEFT" promptText="Book Name" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="20.0" />
+                    </VBox.margin>
+                </TextField>
+                <TextField fx:id="Author" layoutX="20.0" layoutY="30.0" promptText="Author">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                    </VBox.margin>
+                </TextField>
+                <TextField fx:id="Publish" layoutX="20.0" layoutY="30.0" prefHeight="23.0" prefWidth="362.0" promptText="Publish">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <TextField fx:id="Number" layoutX="10.0" layoutY="56.0" prefHeight="23.0" prefWidth="519.0" promptText="Number">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <HBox prefHeight="60.0" prefWidth="600.0">
+                    <children>
+                        <Button fx:id="saveButton" onAction="#addBook" prefHeight="66.0" prefWidth="200.0" style="-fx-background-color: blue;" styleClass="saveBtn" text="Save" textFill="WHITE" />
+                        <Button fx:id="cancelButton" layoutX="10.0" layoutY="10.0" onAction="#cancel" prefHeight="66.0" prefWidth="200.0" style="-fx-background-color: red;" styleClass="cancelBtn" text="Cancel" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

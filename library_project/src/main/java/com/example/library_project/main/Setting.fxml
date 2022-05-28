@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="234.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_project.main.Setting">
+    <children>
+        <VBox alignment="CENTER" layoutY="-11.0" prefHeight="219.0" prefWidth="290.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-11.0">
+            <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of free book loan days" />
+                <TextField fx:id="nDaysWithoutFine" onAction="#handleNDaysWithoutFineAction" prefHeight="18.0" promptText="No of days member can take book without fine">
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </TextField>
+            <Text layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Overdue charges  £/day" />
+                <TextField fx:id="finePerDay" layoutX="10.0" layoutY="10.0" onAction="#handleFinePerDayAction" prefHeight="18.0" promptText="Fine per day">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="how many books can borrow" />
+            <TextField fx:id="nBorrow" onAction="#handleBorrowedAction" promptText="how many books can borrow">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            </children>
+        </VBox>
+        <HBox layoutX="-7.0" layoutY="204.0" prefHeight="32.0" prefWidth="290.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Button fx:id="saveButton" onAction="#saveButtonHandler" prefHeight="30.0" prefWidth="293.0" style="-fx-background-color: Blue;" styleClass="save_button" text="Save" textFill="WHITE" />
+                <Button fx:id="cancelButton" onAction="#cancelButtonHandler" prefHeight="30.0" prefWidth="306.0" style="-fx-background-color: Red;" styleClass="cancel_button" text="Cancel" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
